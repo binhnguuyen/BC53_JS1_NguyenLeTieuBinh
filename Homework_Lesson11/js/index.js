@@ -28,12 +28,26 @@ function salaryCounting() {
 
 // Bài số 2
 // B1
-var number = [1, 2, 3, 4, 5];
-// B2
-var average = (number[0] + number[1] + number[2] + number[3] + number[4]) / 5;
-// B3
-console.log("Số trung bình của dãy số", number, "là:", average);
+function averageValueCounting() {
+    // B1
+    var number1  = +document.getElementById("number1").value;
+    var number2  = +document.getElementById("number2").value;
+    var number3  = +document.getElementById("number3").value;
+    var number4  = +document.getElementById("number4").value;
+    var number5  = +document.getElementById("number5").value;
+    var result2 = document.getElementById("result2");
 
+    // B2
+    var averageValue = ( number1 + number2 + number3 + number4 + number5 ) / 5;
+
+    // B3
+    result2.innerHTML = `
+    <div>
+        <span>Giá trị trung bình của 5 số thực ${number1},${number2},${number3},${number4},${number5} là: ${averageValue}</span>
+    </div> 
+    `
+    result2.classList.add("bg-primary","text-white");
+}
 
 // Bài số 3
 // B1
