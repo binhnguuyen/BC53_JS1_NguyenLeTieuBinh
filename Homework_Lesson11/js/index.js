@@ -8,7 +8,7 @@ function salaryCounting() {
     var salaryPerDay = 100000;
 
     // B2
-    var workdays = document.getElementById("workdays").value;
+    var workdays = +document.getElementById("workdays").value;
     var salary = salaryPerDay * workdays;
     var result1 = document.getElementById("result1");
 
@@ -16,7 +16,7 @@ function salaryCounting() {
     // console.log("Lương nhân viên là", salaryPerDay, "VND trên một ngày thì làm", workdays, "được tổng lương là:", salary.toLocaleString('it-IT', { style: style, currency: currenry }))
     result1.innerHTML = `
     <div>
-        <span>Với mức lương ${salaryPerDay} trên ngày</span>
+        <span>Với mức lương ${salaryPerDay.toLocaleString('it-IT', { style: style, currency: currenry })} trên ngày</span>
         <span>làm ${workdays} trên tháng thì </span>
         <span>tiền lương là: ${salary.toLocaleString('it-IT', { style: style, currency: currenry })}</span>
     </div> 
@@ -50,6 +50,24 @@ function averageValueCounting() {
 }
 
 // Bài số 3
+function USDtoVNDCounting() {
+    // B1
+    var VNDperUSD = 23500;
+    var moneyInUSD = +document.getElementById("moneyInUSD").value;
+    var result3 = document.getElementById("result3");
+
+    // B2
+    var moneyInVND = VNDperUSD * moneyInUSD;
+
+    // B3
+    result3.innerHTML = `
+    <div>
+        <span>Với ${moneyInUSD} USD</span>
+        <span>thì có thể đổi đc ${moneyInVND.toLocaleString('it-IT', { style: style, currency: currenry })}</span>
+    </div> 
+    `
+    result3.classList.add("bg-primary","text-white");
+}
 // B1
 var VNDperUSD = 23500;
 var moneyInUSD = 5;
