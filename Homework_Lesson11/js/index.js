@@ -1,17 +1,29 @@
-// Bài số 1
-// B1
-var salaryPerDay = 100000;
-var workdayPerMonth = 20;
+// Global variables
 var style = "currency";
 var currenry = "VND"
-/*
-var workday = Document.getElementById("workdays");
-console.log(workday);
-*/
-// B2
-var salary = salaryPerDay * workdayPerMonth
-// B3
-console.log("Lương nhân viên là", salaryPerDay, "VND trên một ngày thì làm", workdayPerMonth, "được tổng lương là:", salary.toLocaleString('it-IT', { style: style, currency: currenry }))
+
+// Bài số 1
+function salaryCounting() {
+    // B1
+    var salaryPerDay = 100000;
+
+    // B2
+    var workdays = document.getElementById("workdays").value;
+    var salary = salaryPerDay * workdays;
+    var result1 = document.getElementById("result1");
+
+    // B3
+    // console.log("Lương nhân viên là", salaryPerDay, "VND trên một ngày thì làm", workdays, "được tổng lương là:", salary.toLocaleString('it-IT', { style: style, currency: currenry }))
+    result1.innerHTML = `
+    <div>
+        <span>Với mức lương ${salaryPerDay} trên ngày</span>
+        <span>làm ${workdays} trên tháng thì </span>
+        <span>tiền lương là: ${salary.toLocaleString('it-IT', { style: style, currency: currenry })}</span>
+    </div> 
+    `
+    result1.classList.add("bg-primary","text-white");
+}
+
 
 
 // Bài số 2
@@ -56,7 +68,7 @@ for (var i = 0; i < n.length; i++) {
     sum += num_string[i];
 }
 // B3
-console.log("Tổng của 2 số trong 1 số có 2 chữ số",n,"là:",sum);
+console.log("Tổng của 2 số trong 1 số có 2 chữ số", n, "là:", sum);
 
 
 
