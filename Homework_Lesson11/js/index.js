@@ -68,26 +68,28 @@ function USDtoVNDCounting() {
     `
     result3.classList.add("bg-primary","text-white");
 }
-// B1
-var VNDperUSD = 23500;
-var moneyInUSD = 5;
-// B2
-var moneyUSDtoVND = VNDperUSD * moneyInUSD;
-// B3
-console.log("Quy đổi", moneyInUSD, "với hiện giá", VNDperUSD, "VND/USD ta được số tiền là:", moneyUSDtoVND.toLocaleString('it-IT', { style: style, currency: currenry }))
 
 
 // Bài số 4
-// B1
-var longEdge = 10;
-var shortEdge = 5;
-// B2
-var perimeter = (longEdge + shortEdge) / 2;
-var area = longEdge * shortEdge;
-// B3
-console.log("Chu vi hình chữ nhật với chiều dài", longEdge, "và chiều rộng", shortEdge, "là:", perimeter);
-console.log("Diện tích hình chữ nhật với chiều dài", longEdge, "và chiều rộng", shortEdge, "là:", area);
+function area_PerimeterCounting() {
+    // B1
+    var longEdge = +document.getElementById("longEdge").value;
+    var shortEdge = +document.getElementById("shortEdge").value;
+    var result4 = document.getElementById("result4");
 
+    // B2
+    var perimeter = (longEdge + shortEdge) * 2;
+    var area = longEdge * shortEdge;
+
+    // B3
+    result4.innerHTML = `
+    <div>
+        <span>Với chiều dài là ${longEdge} và chiều rộng là ${shortEdge}</span>
+        <span>thì chu vi của HCN đó là ${perimeter} và diện tích của nó là ${area}</span>
+    </div> 
+    `
+    result4.classList.add("bg-primary","text-white");
+}
 
 // Bài số 5
 // B1
